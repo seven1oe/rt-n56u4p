@@ -59,4 +59,7 @@ install:
 	$(MAKE) -C $(SRC_NAME) install DESTDIR=""
 
 romfs:
+	cp $(SRC_NAME)/src/curl .
+	$(STRIP) curl
+	$(ROMFSINST) /usr/sbin/curl
 
